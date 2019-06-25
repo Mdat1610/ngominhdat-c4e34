@@ -22,10 +22,10 @@ for li in li_list:
         "artist": artist,
     })
     m.append(n)
-    options = {'default_search': 'ytsearch', 
-    'max_downloads': 1}
-    dl = YoutubeDL(options)
-    dl.download(['{0} {1}'. format(name_song,artist )])
+    # options = {'default_search': 'ytsearch', 
+    # 'max_downloads': 1}
+    # dl = YoutubeDL(options)
+    # dl.download(['{0} {1}'. format(name_song,artist )])
 import pyexcel
 pyexcel.save_as(records=m, dest_file_name="itunes.xls")
 
