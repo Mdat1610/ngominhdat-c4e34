@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Edit Food</title>
+</head>
+<body>
+    <form method="POST">
+            <input type="text" placeholder="Tiêu đề" name="title" value="{{E.title}}">
+            <br>
+            <br>
+            <input type="text" placeholder="Mô tả" name="description" value="{{E.description}}">
+            <br>
+            <br>
+            <input type="text" placeholder="Link" name="link" value="{{E.link}}">
+            <br>
+            <br>
+            
+            <select name="type">
+                {% if E.type =="food" %}:
+                    <option value="food" selected>Đồ ăn</option>
+                    <option value="drink">Đồ uống</option>
+                {% elif E.type == "drink" %}:
+                    <option value="food">Đồ ăn</option>
+                    <option value="drink" selected>Đồ uống</option>
+                {% endif %}
+            </select>
+            <input type="submit" value="Sửa">
+            <input type="reset" value="Làm mới">
+    </form>
+</body>
+</html>
