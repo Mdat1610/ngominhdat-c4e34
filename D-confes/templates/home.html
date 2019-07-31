@@ -9,35 +9,21 @@
 </head>
 <body>
     <div>
-        <a href="/home/family">
-        <input type="button" value="Gia Đình">
-        </a>
-        <a href="/home/work">
-        <input type="button" value="Công Việc">
-        </a>
-        <a href="/home/love">
-        <input type="button" value="Tình Yêu">
-        </a>
-        <a href="/home/marriage">
-        <input type="button" value="Hôn Nhân">
-        </a>
-        <a href="/home/life">
-        <input type="button" value="Đời Sống">
-        </a>
+        <a href="/logout">Đăng xuất</a>
     </div>
     <div>
-        <img src="https://www.jamf.com/jamf-nation/img/default-avatars/generic-user-purple.png" alt="">
-        <input type="text" placeholder="Tâm sự của bạn là gì?">
-        <button>Đăng</button>
+        <a href="/post">Đăng bài</a>
     </div>
+    
+    
     <div>
-        {% for stt in new_status %}
-          
+        {% for stt in all_status %}
+            <h4>Chủ đề:{{stt.topic}}</h4>
             <h4>{{ stt.content}}</h4>
-            
+            <a href="/home/{{stt._id}}">Xem thêm</a>
             {% for cmt in stt.comment %}
-            <h4> BInh luan: {{ cmt.content_cmt}}</h4>
-            <h4>User: {{ cmt.id_comment }}</h4>
+            <h4> Bình Luận: {{ cmt.content_cmt}}</h4>
+            <h4> {{ cmt.id_comment }}</h4>
             {% endfor %}  
 
             <hr>
