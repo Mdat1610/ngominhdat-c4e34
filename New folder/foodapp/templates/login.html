@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Login</title>
+    <link rel="stylesheet" href="../static/style.css">
+    <link rel="stylesheet" href="../static/fontawesome-free-5.9.0-web/css/all.css">
+</head>
+<body>
+    <div id="container">
+        <form method="POST" id="login-form">
+            <img id="img-login" src="https://www.redwolf.in/image/catalog/badges/marvel-iron-man-interface-badge.jpg" alt="">
+
+            <div class="div-input">
+                <i class="fas fa-user icon-login"></i>
+                <input class="input-login" type="text" placeholder="User Name" name="username_login">
+            </div>
+
+            <div class="div-input">
+                <i class="fas fa-key icon-login"></i>
+                <input class="input-login" type="password" placeholder="********" name="password_login">
+            </div>
+            
+            <div id="div-button">
+                <input class="button-login" type="submit" value="Đăng Nhập">
+                <a href="/register">
+                <input class="button-login" type="button" value="Đăng Kí">
+                </a>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

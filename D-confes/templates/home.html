@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    
+</head>
+<body>
+    <div>
+        <a href="/home/family">
+        <input type="button" value="Gia Đình">
+        </a>
+        <a href="/home/work">
+        <input type="button" value="Công Việc">
+        </a>
+        <a href="/home/love">
+        <input type="button" value="Tình Yêu">
+        </a>
+        <a href="/home/marriage">
+        <input type="button" value="Hôn Nhân">
+        </a>
+        <a href="/home/life">
+        <input type="button" value="Đời Sống">
+        </a>
+    </div>
+    <div>
+        <img src="https://www.jamf.com/jamf-nation/img/default-avatars/generic-user-purple.png" alt="">
+        <input type="text" placeholder="Tâm sự của bạn là gì?">
+        <button>Đăng</button>
+    </div>
+    <div>
+        {% for stt in new_status %}
+          
+            <h4>{{ stt.content}}</h4>
+            
+            {% for cmt in stt.comment %}
+            <h4> BInh luan: {{ cmt.content_cmt}}</h4>
+            <h4>User: {{ cmt.id_comment }}</h4>
+            {% endfor %}  
+
+            <hr>
+        {% endfor %}  
+            
+
+            
+
+        
+    </div>
+</body>
+</html>

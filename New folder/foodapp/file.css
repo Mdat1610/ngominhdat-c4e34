@@ -1,0 +1,17 @@
+/* h1 { 
+    color: red;
+} */
+
+
+/* selector by tag name{
+    property: value;
+}
+*/
+/* selector by id */
+#first_heading {
+    color: red;
+}
+
+.text-green {
+    color: green;
+}
