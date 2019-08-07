@@ -7,12 +7,26 @@
     <title>Document</title>
 </head>
 <body>
-    <h3> {{status_detail.content}}</h3>
     
-    <form method="POST">
-        <input type="text" name="conten_comment">
+    
+    <h3>{{status_detail.user}}</h3>
+    <img src="https://cdn2.iconfinder.com/data/icons/rcons-user/32/male-shadow-circle-512.png" >
+    <h3> {{status_detail.content}}</h3>
+    <h4>Bình luận {{status_detail.comment|length}}</h4>
+    {% for comment in status_detail.comment %}
+        <img src="https://cdn2.iconfinder.com/data/icons/rcons-user/32/male-shadow-circle-512.png" >
+        <p>{{comment.user}}</p>
+        <p>{{comment.content}}</p>
+    {% endfor %}
+    <form action="/comment/{{status_detail._id}}" method="POST">
+        <p>Bình luận</p>
+        <img src="https://cdn2.iconfinder.com/data/icons/rcons-user/32/male-shadow-circle-512.png" >
+        <b>{{username}}</b>
+        <input type="text" name="cmt_content">
         <button>Đăng</button>
+            
     </form>
-
+    
+    
 </body>
 </html>

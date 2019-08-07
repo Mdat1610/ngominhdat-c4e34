@@ -7,9 +7,16 @@
     <title>Document</title>
 </head>
 <body>
+    <img src="https://cdn2.iconfinder.com/data/icons/rcons-user/32/male-shadow-circle-512.png">
+    <b>{{username}}</b>
     <form method="POST">
         <input type="text" name="content_post" placeholder="Bạn đang có tâm sự gì?">
-        
+        <select name="time">
+            <option value="24h" selected>24h</option>
+            <option value="16h">16h</option>
+            <option value="8h">8h</option>
+            <option value="4h">4h</option>
+        </select>
         <button>Đăng bài</button>
     </form>
 </body>

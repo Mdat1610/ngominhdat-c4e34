@@ -4,35 +4,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-    
+    <title></title>
+    <link rel="stylesheet" href="../static/exx.css">
 </head>
 <body>
-    <div>
+    <div class="first">
         <a href="/logout">Đăng xuất</a>
     </div>
-    <div>
-        <a href="/post">Đăng bài</a>
-    </div>
     
     
+    
+    
+    <img class="picture" src="https://cdn2.iconfinder.com/data/icons/rcons-user/32/male-shadow-circle-512.png">
+    <b>{{username}}</b>
+    <form method="POST" action="/post">
+        <input type="text" name="content_post" placeholder="Bạn đang có tâm sự gì?">
+        
+        <button>Đăng bài</button>
+    </form>
     <div>
         {% for stt in all_status %}
-            <h4>Chủ đề:{{stt.topic}}</h4>
-            <h4>{{ stt.content}}</h4>
+            <img src="https://cdn2.iconfinder.com/data/icons/rcons-user/32/male-shadow-circle-512.png">
+            <p>{{stt.user}}</p>
+            <h4>{{ stt.content}}
+            
+            </h4>
             <a href="/home/{{stt._id}}">Xem thêm</a>
-            {% for cmt in stt.comment %}
-            <h4> Bình Luận: {{ cmt.content_cmt}}</h4>
-            <h4> {{ cmt.id_comment }}</h4>
-            {% endfor %}  
-
+            
             <hr>
-        {% endfor %}  
-            
-
-            
-
         
+        {% endfor %}  
     </div>
 </body>
 </html>

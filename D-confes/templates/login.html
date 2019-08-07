@@ -1,21 +1,42 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-</head>
-<body>
-        <form method="POST">
-            <input type="text" placeholder="User Name" name="username_login">
-            <input type="password" placeholder="********" name="password_login">
+<h2>Welcome to your world</h2>
+<div class="container" id="container">
+	<div class="form-container sign-up-container">
+		<form action="/register" method="POST">
+			<h1>Create Account</h1>
+			
+			
+			<input type="text" disabled value="User {{new_number}}" />
+			
+			<input type="password" placeholder="Password" name="password_register" />
+			<button>Sign Up</button>
+		</form>
+	</div>
+	<div class="form-container sign-in-container">
+		<form action="/login" method="POST">
+			<h1>Sign in</h1>
+			
+			<input type="text" placeholder="Username" name="username_login" />
+			<input type="password" placeholder="Password" name="password_login" />
+			
+			<button>Sign In</button>
+		</form>
+	</div>
+	<div class="overlay-container">
+		<div class="overlay">
+			<div class="overlay-panel overlay-left">
+				<h1>Welcome Back!</h1>
+				<p>To keep connected with us please login with your personal info</p>
+				<button class="ghost" id="signIn">Sign In</button>
+			</div>
+			<div class="overlay-panel overlay-right">
+				<h1>Hello, Friend!</h1>
+				<p>Enter your personal details and start journey with us</p>
+				<button class="ghost" id="signUp">Sign Up</button>
+			</div>
+		</div>
+	</div>
+</div>
 
-            <input type="submit" value="Đăng Nhập">
-            <a href="/register">
-                <input type="button" value="Đăng Kí">
-            </a>
-            
-        </form>
-    </body>
-    </html>
+
+<link rel="stylesheet" href="../static/style.css">
+<script src="../static/ex.js"></script>
